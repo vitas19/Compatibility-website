@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'background.css' %}">
+  <link rel="stylesheet" href="{% static 'title.css' %}">
+  <link rel="stylesheet" href="{% static 'button.css' %}">
+</head>
+<body>
+  <h1>Sangre Sin Riesgo</h1>
+
+  <form method="GET" action="{% url 'medicine_results' %}">
+    <div style="text-align: center;">
+    <input id="medicine" name="medicine" placeholder="Seleccione el medicamento" list="medicines">
+    <datalist id="medicines">
+      {% for medicine in medicines %}
+      <option value=" {{ medicine }} "></option>
+      {% endfor %}
+    </datalist>
+    <button class="styled-button" type="submit">Buscar</button>
+  </div>
+  </form>
+  
+</body>
+</html>

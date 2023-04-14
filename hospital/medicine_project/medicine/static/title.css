@@ -1,0 +1,23 @@
+h1 {
+    font-size: 48px;
+    text-align: center;
+    color: white; 
+    font-family: Lobster; 
+    margin-top: 100px
+  }
+
+input {
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #e8e8e8;
+
+    font-size: medium;
+    font-weight: bold;
+    width: 235px;
+   }
+   
+input:focus {
+    outline-color: white;
+    place-content: "Enter your message!";
+   }

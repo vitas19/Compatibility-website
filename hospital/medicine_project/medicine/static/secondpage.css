@@ -1,0 +1,19 @@
+h1 {
+    font-size: 48px;
+    text-align: center;
+    color: white; 
+    font-family: Lucida Sans Regular; 
+    margin-top: 50px
+}
+.page-header {
+    background-color: #C00000;
+    margin-top: 0;
+    padding: 10px 10px 10px 20px;
+}
+body {
+    background: linear-gradient(to bottom, #f9eaea, #ffffff);
+  }
+
+.my-class {
+    --my-color: #FFFFFF;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+  <link rel="stylesheet" href="{% static 'secondpage.css' %}">
+</head>
+<body>
+        <div class="page-header" style = "{{ style_server.st1 }}">
+            <h1>{{ result.name }}</h1>
+        </div>
+        <div class="my-class" style = "{{ style_server.st2 }}">
+            <p><b>¿Es compatible con la donación de sangre?:</b> </strong><br> {{ result.donation }}</p>
+            {% if result.days != "nan"%}
+                <p><b>Tiempo hasta poder donar:</b> </strong><br> {{ result.days }}</p>
+            {% endif %}
+            {% if result.observations != "nan"%}
+                <p style="text-align: justify;"><b>Observaciones:</b> </strong><br> {{ result.observations }}</p>
+            {% endif %}
+            {% if result.bibliography != "nan"%}
+                    <p><b>Bibliografía:</b> </strong><br></p>
+            {% endif %}   
+                <ul>
+                {% for b in bibliography %}
+                    <li><a href= "{{b}}" target="_blank">{{b}}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+
+    <a href="/">Ir a la página principal</a>
+
+</body>
+</html>
+
+

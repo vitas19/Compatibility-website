@@ -1,0 +1,20 @@
+<!-- dropdown.html -->
+
+{% extends "base.html" %}
+
+{% block title %}Medicines{% endblock %}
+
+{% block content %}
+<div class="ui fluid search selection dropdown">
+  <input type="hidden" name="dropdown">
+  <i class="dropdown icon"></i>
+  <div class="default text">Seleccione medicamento</div>
+  <div class="menu">
+    <select>
+    {% for medicine in medicines %}
+    <div class="item" data-value="{{ medicine.medicine }} / {{ medicine.name }} ">{{ medicine.medicine }} / {{ medicine.name}}</div>
+    {% endfor %}
+    </select>
+  </div>
+</div>
+{% endblock %}

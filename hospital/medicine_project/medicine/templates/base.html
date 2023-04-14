@@ -1,0 +1,24 @@
+<!-- base.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+
+  <!-- Include Semantic UI CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+  <!-- Include jQuery and Semantic UI JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</head>
+<body>
+  <div class="ui container">
+    <!-- Page content goes here -->
+    {% block content %}{% endblock %}
+  </div>
+
+</body>
+</html>
+
