@@ -94,16 +94,3 @@ def medicine_results(request):
 
     return render(request, 'medicine_results.html', context)
 
-
-
-def get_cell_color(sheet, row_index, col_index):
-    # Get the color of the cell at the specified row and column indices
-    cell_color = sheet.cell(row=row_index, column=col_index).fill.start_color.index
-    
-    # Extract the RGB values from the color code
-    red = int(cell_color[2:4], 16)
-    green = int(cell_color[4:6], 16)
-    blue = int(cell_color[6:8], 16)
-    
-    # Return the RGB values as a tuple
-    return (red, green, blue)
